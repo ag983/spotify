@@ -10,7 +10,7 @@ and put them in a CSV file
 # from __future__ import unicode_literals
 import csv
 import re
-from spotipy_helpers import *
+from spotipy_helpers import *       # includes login details for spotify (start_spotify)
 
 
 
@@ -45,43 +45,3 @@ for item in container:
 
 
 
-
-# first_track = container[0].tracks[0]
-# playlist_name = container[0].name
-#
-#
-# # search = session.search('adele')
-# search = session.search(raw_input("Search for tracks by artist, track or playlist"))
-# search.load()
-#
-# for i in range(0, 12):
-#     print(str(i) + ": " + search.tracks[i].name + "   " + str(search.tracks[i].popularity))
-#
-# t = raw_input("Which track would you like to hear (or enter for random playlist track)?")
-# if len(t) > 0:
-#     track_uri = search.tracks[int(t)].link.uri
-# else:
-#     track_uri = first_track.link.uri
-#
-#
-# # Play a track
-# track = session.get_track(track_uri).load()
-# session.player.load(track)
-# session.player.play()
-#
-# # Wait for playback to complete or Ctrl+C
-# try:
-#     while not end_of_track.wait(0.1):
-#         pass            # this means "do nothing"
-# except KeyboardInterrupt:
-#     pass
-#
-#
-
-# file = open('myfile.dat', 'w+')
-#
-# with open('/home/ai/projects/spotify/eggs.csv', 'w') as csvfile:
-#     spamwriter = csv.writer(csvfile, delimiter=',',
-#                             quotechar='"', quoting=csv.QUOTE_NONNUMERIC)   # , quoting=csv.QUOTE_MINIMAL
-#     spamwriter.writerow(['Spam'] * 5 + ['Baked Beans', 5.234])
-#     spamwriter.writerow(['Spam', 'Lovely Spam', 'Wonderful Spam', -0.1335, str(2)])
